@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>products</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-slides pager style="height: 150px;">
+    <ion-slide style="background-color: green">
+      <ion-img style="width: 1255px; height: 150px;" src="assets/imgs/vegetables.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide style="background-color: blue">
+      <ion-img style="width: 1255px; height: 150px;" src="assets/imgs/non-veg.png"></ion-img>
+    </ion-slide>
+    <ion-slide style="background-color: red">
+      <ion-img style="width: 1255px; height: 150px;" src="assets/imgs/grocery.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+
+  <u>Products</u><br>
+  Apple <button ion-button color="secondary">Add</button> <br>
+  Orange <button ion-button color="secondary">Add</button> <br>
+  Banana <button ion-button color="secondary">Add</button> <br>
+
+  <button ion-button (click)="checkOut($event)">
+    Check Out!
+  </button>
+
+  <ion-list>a
+    <ion-item *ngFor="let post of postList">
+      <!--{{ post }}-->
+      {{ post.id }} - {{ post.title }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

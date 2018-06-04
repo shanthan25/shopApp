@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>checkout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class = "row responsive-sm">
+    <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone Number</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.phone_no" name="phone_no"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Address</ion-label>
+        <ion-textarea [(ngModel)]="todo.address" name="address"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block>Ok</button>
+    </form>
+  </div>
+</ion-content>
